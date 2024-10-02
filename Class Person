@@ -1,0 +1,68 @@
+class Person {
+  String? firstName, lastName, studentID;
+  int? age;
+  
+  // Setter for firstName
+  set updateFirstName(String fn) {
+    this.firstName = fn;
+  }
+
+  // Getter for firstName
+  String? get getFirstName {
+    return this.firstName;
+  }
+  
+  // Setter for lastName
+  set updateLastName(String ln) {
+    this.lastName = ln;
+  }
+
+  // Getter for lastName
+  String? get getLastName {
+    return this.lastName;
+  }
+
+  // Setter for age
+  set updateAge(int age) {
+    this.age = age;
+  }
+
+  // Getter for age
+  int? get getAge {
+    return this.age;
+  }
+
+  // Setter for studentID
+  set updateStudentID(String sn) {
+    this.studentID = sn;
+  }
+
+  // Function to get full name
+  String fullName() {
+    return "${this.firstName!} ${this.lastName!}";
+  }
+
+  // Method to print the name
+  void printName() {
+    print("The first name is: $firstName");
+    print("The last name is: $lastName");
+  }
+}
+
+void display() {
+  Person p1 = new Person();
+  
+  // Updating the person's details
+  p1.updateFirstName = "Pearl Joy";
+  p1.updateLastName = "Felia";
+  p1.updateAge = 21;
+  p1.updateStudentID = "1101010-10101001";
+  
+  // Printing full name and age
+  print("My name is ${p1.fullName()} and my age is ${p1.getAge}. My school ID is ${p1.studentID}");
+}
+
+// Call display function to test
+void main() {
+  display();
+}
